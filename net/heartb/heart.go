@@ -27,7 +27,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "github.com/go-ego/riot/net/grpc/riot-pb"
+	pb "github.com/csshere/riot/net/grpc/riot-pb"
 )
 
 var (

@@ -19,11 +19,11 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/go-ego/riot/net/com"
-	rpc "github.com/go-ego/riot/net/grpc"
-	rhttp "github.com/go-ego/riot/net/http"
+	"github.com/csshere/riot/net/com"
+	rpc "github.com/csshere/riot/net/grpc"
+	rhttp "github.com/csshere/riot/net/http"
 
-	"github.com/go-ego/riot"
+	"github.com/csshere/riot"
 	"github.com/go-vgo/gt/conf"
 	"github.com/go-vgo/gt/zlog"
 )

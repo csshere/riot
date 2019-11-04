@@ -41,3 +41,5 @@ replace (
 	golang.org/x/text v0.3.0 => github.com/golang/text v0.3.0
 	google.golang.org/grpc v1.17.0 => github.com/grpc/grpc-go v1.17.0
 )
+
+go 1.13

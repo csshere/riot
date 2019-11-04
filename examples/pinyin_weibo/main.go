@@ -13,8 +13,8 @@ import (
 	"os/signal"
 	"strconv"
 
-	"github.com/go-ego/riot"
-	"github.com/go-ego/riot/types"
+	"github.com/csshere/riot"
+	"github.com/csshere/riot/types"
 )
 
 const (

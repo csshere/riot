@@ -23,8 +23,8 @@ import (
 	"encoding/gob"
 
 	"github.com/go-ego/murmur"
-	"github.com/go-ego/riot/core"
-	"github.com/go-ego/riot/types"
+	"github.com/csshere/riot/core"
+	"github.com/csshere/riot/types"
 	toml "github.com/go-vgo/gt/conf"
 )
 

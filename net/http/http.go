@@ -25,8 +25,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-ego/riot/net/com"
-	"github.com/go-ego/riot/types"
+	"github.com/csshere/riot/net/com"
+	"github.com/csshere/riot/types"
 )
 
 var (

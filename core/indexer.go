@@ -25,8 +25,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/go-ego/riot/types"
-	"github.com/go-ego/riot/utils"
+	"github.com/csshere/riot/types"
+	"github.com/csshere/riot/utils"
 )
 
 // Indexer 索引器
@@ -418,15 +418,27 @@ func (indexer *Indexer) internalLookup(
 	keywords, tokens []string, docIds map[string]bool, countDocsOnly bool) (
 	docs []types.IndexedDoc, numDocs int) {
 
-	table := make([]*KeywordIndices, len(keywords))
+	table := make([]*KeywordIndices, 0)
 	for i, keyword := range keywords {
 		indices, found := indexer.tableLock.table[keyword]
-		if !found {
+		//搜索key没有命中则直接返回
+		if !found && i == 0 {
 			// 当反向索引表中无此搜索键时直接返回
 			return
 		}
 		// 否则加入反向表中
-		table[i] = indices
+		if found {
+			table = append(table,indices)
+			//label 中有一个命中则返回
+			if i > 0 {
+				break
+			}
+		}
+	}
+
+	// 如果有label但label没有命中则返回
+	if len(keywords) > 1 && len(table) < 2 {
+		return
 	}
 
 	// 当没有找到时直接返回
