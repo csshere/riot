@@ -35,6 +35,8 @@ func OpenBadger(dbPath string) (Store, error) {
 	// os.MkdirAll(path.Dir(dbPath), os.ModePerm)
 
 	opt := badger.DefaultOptions(dbPath)
+	opt.ValueLogLoadingMode = options.FileIO
+	opt.Truncate = true
 	// opt.Dir = dbPath
 	// opt.ValueDir = dbPath
 	// opt.SyncWrites = true
