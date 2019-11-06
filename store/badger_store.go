@@ -18,6 +18,7 @@ import (
 	"log"
 
 	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/options"
 )
 
 // Badger badger.KV db store
